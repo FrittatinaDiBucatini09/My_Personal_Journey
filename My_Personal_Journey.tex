@@ -1,0 +1,103 @@
+\documentclass[12pt,a4paper,twoside,openright]{book}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+
+
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    top=3cm,
+    bottom=3cm,
+    left=2.5cm,
+    right=2.5cm,
+    heightrounded,
+    bindingoffset=5mm,
+    includehead,
+    includefoot
+}
+
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{bm}
+
+
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta, shapes.geometric, calc}
+
+
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{array}
+
+
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\algnewcommand\Inputs{\item[\textbf{Input:}]}
+\algnewcommand\Outputs{\item[\textbf{Output:}]}
+\algnewcommand\Initialization{\item[\textbf{Initialization:}]}
+
+
+\usepackage{enumitem}
+
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{14.5pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\leftmark}
+\fancyfoot[C]{\thepage}
+
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,
+    urlcolor=Blue,
+    pdftitle={My Personal Journey to Become an AI/ML Engineer - Riccardo Balzani},
+    pdfpagemode=FullScreen,
+}
+\usepackage[all]{hypcap}
+
+
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\usepackage[most]{tcolorbox}
+
+\newtcolorbox{unibobox}[1]{
+  colback=red!5!white,
+  colframe=red!75!black,
+  fonttitle=\bfseries,
+  title=#1,
+  arc=4pt,
+  outer arc=1pt
+}
+
+\title{My Personal Journey to Become an AI/ML Engineer}
+\author{Riccardo Balzani (I'm still a student btw)}
+\date{From January 2026}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\include{chapters/chapter1}
+\include{chapters/chapter2}
+
+\end{document}

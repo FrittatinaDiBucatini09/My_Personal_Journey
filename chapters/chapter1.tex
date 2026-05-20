@@ -1,102 +1,3 @@
-\documentclass[12pt,a4paper,twoside,openright]{book}
-
-% --- LINGUA E CODIFICA ---
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[english]{babel}
-\usepackage{lmodern}
-
-% --- LAYOUT E GEOMETRIA ---
-\usepackage{geometry}
-\geometry{
-    a4paper,
-    top=3cm,      % Aumentato per dare respiro alla testata
-    bottom=3cm,   % Aumentato per dare respiro al numero di pagina
-    left=2.5cm,
-    right=2.5cm,
-    heightrounded,
-    bindingoffset=5mm, % FONDAMENTALE per la rilegatura
-    includehead,
-    includefoot
-}
-
-% --- MATEMATICA E SIMBOLI ---
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{amsthm}
-\usepackage{amsfonts}
-\usepackage{bm} % Per il grassetto nelle formule matematiche
-
-% --- GRAFICA E COLORI ---
-\usepackage{graphicx}
-\usepackage[dvipsnames]{xcolor}
-\usepackage{tikz}
-\usetikzlibrary{positioning, arrows.meta, shapes.geometric, calc} 
-
-% --- TABELLE ---
-\usepackage{booktabs}
-\usepackage{longtable}
-\usepackage{tabularx}
-\usepackage{array}
-
-% --- ALGORITMI ---
-\usepackage{algorithm}
-\usepackage{algpseudocode}
-% Traduzione delle keywords degli algoritmi
-\algnewcommand\Inputs{\item[\textbf{Input:}]}
-\algnewcommand\Outputs{\item[\textbf{Output:}]}
-\algnewcommand\Initialization{\item[\textbf{Initialization:}]}
-
-% --- LISTE ED ENUMERAZIONI ---
-\usepackage{enumitem}
-
-% --- INTESTAZIONI E PIÈ DI PAGINA ---
-\usepackage{fancyhdr}
-\setlength{\headheight}{14.5pt}
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[L]{\leftmark}
-\fancyfoot[C]{\thepage}
-
-% --- CROSS-REFERENCING (Sempre per ultimo o quasi) ---
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=black,
-    filecolor=magenta,      
-    urlcolor=Blue,
-    pdftitle={Thesis Title - Riccardo Balzani}, % Suggerisco di mettere il titolo o il tuo nome
-    pdfpagemode=FullScreen,
-}
-\usepackage[all]{hypcap} % Per far sì che i link alle figure puntino all'immagine e non alla didascalia
-
-% --- DEFINIZIONE AMBIENTI TEORICI  ---
-\newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{definition}{Definition}[chapter]
-\newtheorem{lemma}{Lemma}[chapter]
-\newtheorem{proposition}{Proposition}[chapter]
-\newtheorem{corollary}{Corollary}[chapter]
-\usepackage[most]{tcolorbox}
-
-\newtcolorbox{unibobox}[1]{
-  colback=red!5!white,
-  colframe=red!75!black,
-  fonttitle=\bfseries,
-  title=#1,
-  arc=4pt,
-  outer arc=1pt
-}
-
-\title{My Personal Journey to Become and AI/ML Engineer}
-\author{Riccardo Balzani (I'm still a student btw)}
-\date{From January 2026}
-
-\begin{document}
-
-\maketitle
-
-\tableofcontents
-
 \chapter{The Mathematical Bedrock: Linear Algebra}
 
 \begin{quote}
@@ -104,9 +5,9 @@
 \end{quote}
 
 \section*{A Note on Sources and Methodology}
-The insights presented in this chapter are a synthesis of formal academic training and independent research. The core theoretical framework is built upon the lecture notes from the \textbf{Linear Algebra} course held by \textbf{Professor Luca Moci}. 
+The insights presented in this chapter are a synthesis of formal academic training and independent research. The core theoretical framework is built upon the lecture notes from the \textbf{Linear Algebra} course held by \textbf{Professor Luca Moci}.
 
-These foundations were laid during my studies in \textbf{Computer Science and Engineering} at the \textbf{University of Bologna (Cesena Campus)}. 
+These foundations were laid during my studies in \textbf{Computer Science and Engineering} at the \textbf{University of Bologna (Cesena Campus)}.
 
 To bridge the gap between pure mathematical theory and practical AI applications, these academic roots have been integrated with:
 \begin{itemize}
@@ -120,13 +21,13 @@ To bridge the gap between pure mathematical theory and practical AI applications
 In the context of Machine Learning, vectors are far more than mere geometric arrows; they are the fundamental containers for information. Whether we are representing a pixel in an image, a word in a sentence, or a user's preferences in a recommendation system, we are dealing with elements of a \textbf{Vector Space}.
 
 \subsection{Formal Definition and Intuition}
-Following a rigorous approach, we define a vector space $V$ over a field $\mathbb{R}$ as a set of objects (vectors) equipped with two operations: vector addition and scalar multiplication. 
+Following a rigorous approach, we define a vector space $V$ over a field $\mathbb{R}$ as a set of objects (vectors) equipped with two operations: vector addition and scalar multiplication.
 
 For ML engineers, the most relevant space is the $n$-dimensional Euclidean space $\mathbb{R}^n$. A vector $\mathbf{x} \in \mathbb{R}^n$ is an ordered $n$-tuple of real numbers:
 $$ \mathbf{x} = \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix} $$
 
 \subsection{The Machine Learning Perspective}
-Why does this matter in the labs? Because every "feature" of our dataset corresponds to a dimension in this space. If we are predicting house prices based on \textit{area} and \textit{number of rooms}, each house is a vector in $\mathbb{R}^2$. 
+Why does this matter in the labs? Because every "feature" of our dataset corresponds to a dimension in this space. If we are predicting house prices based on \textit{area} and \textit{number of rooms}, each house is a vector in $\mathbb{R}^2$.
 
 As emphasized in \textit{Deisenroth's} work, the power of Linear Algebra lies in our ability to manipulate these high-dimensional objects using the same rules we use for simple 2D geometry. When we train a model, we are essentially looking for the "best" transformation or orientation within these abstract spaces.
 
@@ -161,7 +62,7 @@ For $(V, \mathbb{F}, +, \cdot)$ to be a vector space, the following axioms must 
 
 \subsection{Significance in Engineering and Machine Learning}
 
-The abstract nature of these axioms is not a mathematical pedantry but a functional necessity. By abstracting the concept of a "vector," we gain a unified framework to manipulate diverse data structures—be it a grayscale image ($I \in \mathbb{R}^{m \times n}$), a sequence of audio samples, or the hidden states of a Transformer model. 
+The abstract nature of these axioms is not a mathematical pedantry but a functional necessity. By abstracting the concept of a "vector," we gain a unified framework to manipulate diverse data structures—be it a grayscale image ($I \in \mathbb{R}^{m \times n}$), a sequence of audio samples, or the hidden states of a Transformer model.
 
 In Machine Learning, this provides the mathematical justification for two fundamental operations:
 
@@ -196,7 +97,7 @@ A set of vectors $\{\mathbf{v}_1, \dots, \mathbf{v}_k\}$ is \textbf{linearly ind
 \begin{equation}
     \sum_{i=1}^k c_i\mathbf{v}_i = \mathbf{0}
 \end{equation}
-is by setting all coefficients to zero ($c_1 = c_2 = \dots = c_k = 0$). 
+is by setting all coefficients to zero ($c_1 = c_2 = \dots = c_k = 0$).
 
 If any vector in the set can be written as a linear combination of the others, the set is \textbf{linearly dependent}. From an engineering standpoint, dependence implies \textbf{redundancy}. In a dataset, if one feature is a linear combination of others (e.g., age in months vs. age in years), it adds no new information to the system and can lead to numerical instability during training.
 
@@ -231,7 +132,7 @@ A mapping $L: V \to W$ between two vector spaces is called \textbf{linear} if it
 In simpler terms, a linear map ensures that the origin remains fixed and that straight lines remain straight and parallel after the transformation.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\linewidth]{Linear_Map.png}
+    \includegraphics[width=0.7\linewidth]{img_cap1/Linear_Map.png}
     \caption{Kernel and image of a linear mapping $\Phi : V \rightarrow W$}
     \label{fig:placeholder}
 \end{figure}
@@ -274,18 +175,18 @@ This principle extends naturally to \textbf{vector-matrix multiplication} by tre
         \caption{Example of $M_1 \times M_2$}
         \label{fig:placeholder}
     \end{figure}
-    
+
     \item \textbf{Matrix $\times$ Column Vector:} $(n \times \mathbf{m}) \times (\mathbf{m} \times 1) \to (n \times 1)$
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.6\linewidth]{matric_vector.png}
+        \includegraphics[width=0.6\linewidth]{img_cap1/matric_vector.png}
         \caption{Example of $M \times v$}
         \label{fig:placeholder}
     \end{figure}
     \item \textbf{Row Vector $\times$ Matrix:} $(1 \times \mathbf{m}) \times (\mathbf{m} \times p) \to (1 \times p)$
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.8\linewidth]{row_vec_mat.png}
+        \includegraphics[width=0.8\linewidth]{img_cap1/row_vec_mat.png}
         \caption{Example of $v^T \times M$}
         \label{fig:placeholder}
     \end{figure}
@@ -293,7 +194,7 @@ This principle extends naturally to \textbf{vector-matrix multiplication} by tre
     \item \textbf{Row Vector $\times$ Column Vector:} $(n \times \mathbf{1}) \times (\mathbf{1} \times p) \to (n \times p)$
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.8\linewidth]{row_column.png}
+        \includegraphics[width=0.8\linewidth]{img_cap1/row_column.png}
         \caption{Example of $u^T\times v$}
         \label{fig:placeholder}
     \end{figure}
@@ -364,7 +265,7 @@ To find the rank of a matrix manually, we perform Gaussian Elimination to reach 
 Consider the matrix $A$:
 
 \begin{equation*}
-A = 
+A =
 \begin{bmatrix}
 1 & 2 & 3 \\
 2 & 4 & 6 \\
@@ -372,7 +273,7 @@ A =
 \end{bmatrix}
 \end{equation*}
 
-\textbf{Step 1: Identify Redundancy.} 
+\textbf{Step 1: Identify Redundancy.}
 Notice that the second row is exactly twice the first row ($R_2 = 2 \times R_1$). This implies linear dependence. We apply the operation $R_2 \leftarrow R_2 - 2R_1$:
 
 \begin{equation*}
@@ -623,6 +524,16 @@ The \textbf{eigenvalues} of this Hessian matrix dictate the curvature of the los
     \item \textbf{Negative Eigenvalues:} The curve bends downwards (concave), indicating a saddle point rather than a minimum.
 \end{itemize}
 
+
+\begin{unibobox}{Engineering Insight: Positive Definite Matrices and Convexity}
+    In Machine Learning, training is essentially the search for the lowest point in a high-dimensional loss landscape. There is an ideal mathematical condition for this search: when the Hessian matrix $H$ evaluated at a point is \textbf{positive definite}.
+
+From the theory of quadratic forms, we know that a symmetric matrix is positive definite if and only if all its eigenvalues are strictly greater than zero ($\lambda_i > 0$ for all $i$). If the Hessian of our Loss Function possesses this property everywhere, the function is \textbf{strictly convex} (you can imagine it shaped like a perfect ``bowl'').
+
+\textbf{Why is this the ``Holy Grail'' of optimization?} Because in a convex landscape, mathematics guarantees that any local minimum is also the global minimum. While in Deep Learning we almost always navigate highly non-convex spaces, fundamental models like Linear Regression, Logistic Regression, and Support Vector Machines (SVM) rely precisely on this mathematical guarantee. It ensures that Gradient Descent will always find the absolute optimal solution without getting trapped in sub-optimal local minima.
+\end{unibobox}
+
+
 \begin{unibobox}{Engineering Insight: The "Ravine" Problem}
 Why does standard Gradient Descent (SGD) often struggle?
 Imagine a loss landscape that looks like a narrow, elongated ravine.
@@ -678,26 +589,26 @@ This definition implies that the columns of $Q$ are \textbf{orthonormal}: they a
 
 We show a first example of this concept:
 $$
-Q Q^T = 
-\begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} 
-\begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix} = 
-\begin{pmatrix} 
-(0)(0) + (-1)(-1) & (0)(1) + (-1)(0) \\ 
-(1)(0) + (0)(-1) & (1)(1) + (0)(0) 
-\end{pmatrix} = 
+Q Q^T =
+\begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}
+\begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix} =
+\begin{pmatrix}
+(0)(0) + (-1)(-1) & (0)(1) + (-1)(0) \\
+(1)(0) + (0)(-1) & (1)(1) + (0)(0)
+\end{pmatrix} =
 \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} = I
 $$
 
 In this second example, we used a \textbf{2D Rotation Matrix} to demonstrate orthogonality. This is perhaps the most elegant application of the concept in geometry \footnote{A rotation matrix is a specialized square matrix used to perform a rotation in Euclidean space. In the context of our second example, it represents a transformation that rotates a vector around the origin by a fixed angle $0$ without changing its length or the orientation of the space.}.
 $$
-Q Q^T = 
+Q Q^T =
 \begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix}
-\begin{pmatrix} \cos\theta & \sin\theta \\ -\sin\theta & \cos\theta \end{pmatrix} = 
+\begin{pmatrix} \cos\theta & \sin\theta \\ -\sin\theta & \cos\theta \end{pmatrix} =
 $$
 $$
-= \begin{pmatrix} 
-\cos^2\theta + \sin^2\theta & \cos\theta\sin\theta - \sin\theta\cos\theta \\ 
-\sin\theta\cos\theta - \cos\theta\sin\theta & \sin^2\theta + \cos^2\theta 
+= \begin{pmatrix}
+\cos^2\theta + \sin^2\theta & \cos\theta\sin\theta - \sin\theta\cos\theta \\
+\sin\theta\cos\theta - \cos\theta\sin\theta & \sin^2\theta + \cos^2\theta
 \end{pmatrix} =
 \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}
 $$
@@ -718,7 +629,3 @@ In deep networks (especially Recurrent Neural Networks - RNNs), we multiply the 
 
 If we initialize weights using \textbf{Orthogonal Initialization}, the eigenvalues have magnitude exactly 1. The signal is rotated but its magnitude is preserved deep into the network, allowing the gradient to flow backwards without decaying.
 \end{unibobox}
-
-
-\chapter{Probability and Statistics: The Architecture of Uncertainty}
-\end{document}
