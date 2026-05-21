@@ -6,7 +6,11 @@ Welcome to the repository of my ongoing book and study notes, documenting my pat
 
 This project is a comprehensive LaTeX book that chronicles my personal learning journey in AI and ML. Starting from the absolute mathematical bedrock, I am synthesizing formal academic training with practical engineering perspectives. 
 
-As a Computer Science and Engineering student at the University of Bologna (Cesena Campus), I created this project to bridge the gap between pure mathematical theory and hands-on AI applications. The goal is to make complex concepts—like deep neural network transformations and optimization landscapes—intuitive and geometrically accessible. 🎯
+As a [Computer Science and Engineering](https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche) student at the University of Bologna, I created this project to bridge the gap between pure mathematical theory and hands-on AI applications. The goal is to make complex concepts—like deep neural network transformations and optimization landscapes—intuitive and geometrically accessible. 🎯
+
+> **Update** Now I'm graduated in Computer Science and Engineering. 😉
+> 
+> Still need to choose where to go for my master degree tho. 🤔
 
 ## 📚 Table of Contents (Current & Planned)
 
@@ -35,6 +39,7 @@ pdflatex My_Personal_Journey.tex
 ```
 
 *Note: You may need to run the compiler multiple times to properly generate the table of contents and cross-references.*
+*Note: Right now I didn't release the resources in this repo*
 
 ## 🤝 Contributions & Feedback
 
